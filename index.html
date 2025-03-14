@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>PH Tube Hero</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    <style>
+        button{
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        @media screen and (min-width: 640px) {
+            
+            #main-container > div{
+                width: 48%;
+            }
+        }
+        @media screen and (min-width: 732px) {
+            
+            #main-container > div{
+                width: 31%;
+            }
+        }
+        @media screen and (min-width: 1240px) {
+            
+            #main-container > div{
+                width: 23%;
+            }
+        }
+        .active{
+            background: red;
+            color:white
+        }
+    </style>
+</head>
+<body id="body">
+    <header>
+        <nav class="flex justify-between items-center mx-10 py-5 border-b-2 border-[#17171720]">
+            <div>
+                <img src="Logo.png" alt="">
+            </div>
+            <div>
+                <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                    <input id="search-input" type="search" required placeholder="Search"/>
+                  </label>
+            </div>
+            <div>
+                <button id="" class=" bg-red-700 text-white text-lg py-2.5 px-5">
+                    Sort by view
+                </button>
+            </div>
+        </nav>
+        <div id="category-container" class="flex justify-center mx-10 gap-5 py-10">
+            <div>
+                <button id="show-all-content" onclick="loadVideo()" class="btn text-[#25252570]">All</button>
+            </div>
+        </div>
+    </header>
+    <main class="mx-10 h-auto my-8">
+        <section id="main-container" class="flex gap-5 lg:gap-8 flex-wrap flex-col sm:flex-row justify-center">
+            
+            <div class="flex flex-col justify-center items-center h-[70vh]">
+                <img src="Icon.png" alt="">
+                <h2 class="text-2xl font-bold text-center">
+                    Oops!! Sorry, There is no content here
+                </h2>
+            </div>
+        </section>
+        <dialog id="video_details" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="details-container">
+
+            </div>
+            <div class="modal-action">
+            <form method="dialog">
+                <button class="btn">Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+    </main>
+  
+    <script src="script/script.js"></script>
+</body>
+</html>

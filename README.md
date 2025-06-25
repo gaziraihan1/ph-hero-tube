@@ -31,12 +31,13 @@
 ---
 
 ## 🔧 How to Run Locally
-
-```bash
 # Clone the repository
+bash
+```
 git clone https://github.com/gaziraihan1/ph-hero-tube.git
 ```
 # Navigate into the folder
+```
 cd ph-hero-tube
-
+```
 # Open index.html in your browser
